@@ -1,20 +1,8 @@
 .DS_Store
-.ssh
 
 .Rhistory
-*.Rproj
 .Rproj.user
-model.paclitaxel.Rds
 
-KEA_DrugResponse
-data
-pdf
-res
+Note*.txt
 
-fiddle.R
-errorFiddle.R
-note.txt
-
-*.Rmd
-Markdown2*.pdf
 
