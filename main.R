@@ -35,8 +35,7 @@ ensemble <-
                   glmnet = caretModelSpec(method='glmnet', tuneGrid=expand.grid(alpha=seq(0.2, 0.05, length.out=10), lambda=seq(0.2, 0.05, length.out=10))),
                   gbm = caretModelSpec('gbm', tuneGrid=expand.grid(n.trees=c(300,500,600,800,1000,1200), interaction.depth=c(3,4,6,8,10,12), shrinkage=seq(0.05,0.5, length.out=6), n.minobsinnode=c(2,4,6,8,10,12))), 
                   svmRadial = caretModelSpec('svmRadial', tuneGrid=expand.grid(sigma=seq(8e-04, 2e-04, length.out=20), C=seq(2.5,0.5, length.out=20))),
-                  xgbLinear = caretModelSpec('xgbLinear', tuneGrid=expand.grid(lambda=seq(0.01,0.5,length.out=10), alpha=seq(0.01,0.5, length.out=10), eta=seq(0.1,0.9,length.out=10), nrounds=seq.int(100,1000,length.out=10))),
-                  glmnet = caretModelSpec(method='glmnet', tuneGrid=data.frame(alpha=seq(0.2, 0.05, length.out=10), lambda=seq(0.2, 0.05, length.out=10)))
+                  xgbLinear = caretModelSpec('xgbLinear', tuneGrid=expand.grid(lambda=seq(0.01,0.5,length.out=10), alpha=seq(0.01,0.5, length.out=10), eta=seq(0.1,0.9,length.out=10), nrounds=seq.int(100,1000,length.out=10)))
                 ),
                 stack.trainControl = trainControl(
                   method="cv",
